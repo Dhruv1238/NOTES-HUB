@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
+import user.views as userviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', userviews.home, name='login'),
+    path('google-auth/', userviews.google_auth, name='google_auth'),
+
+
 ]
