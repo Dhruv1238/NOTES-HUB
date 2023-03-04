@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'social_django',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -131,10 +134,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
-
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '930030645486-ok5ou67v219pu6utjmu6jgodgtlg40eh.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'

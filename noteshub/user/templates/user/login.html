@@ -11,14 +11,14 @@
   <body>
 	<h1> MASTI </h1>
   <h2>Log in</h2>
-<form method="post">
+  <h2>Log in</h2>
+  <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Log in</button>
-    <a href="{% url 'login' %}">Log in</a>
-</form>
-<hr>
-<p>Or log in with Google:</p>
-<a href="{% url 'google_auth' 'google-oauth2' %}" class="btn btn-default">Log in with Google</a>
+  </form>
+  <hr>
+  <p>Or log in with Google:</p>
+  <a href="{% url 'google_auth' 'google-oauth2' %}" class="btn btn-default">Log in with Google</a>
   </body>
 </html>
